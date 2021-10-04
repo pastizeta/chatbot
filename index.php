@@ -25,8 +25,8 @@
                     };
 
                     fetch("https://dova14793zz3k.cloudfront.net", requestOptions)
-                    .then(response => function(){
-                        $('#contenido').html(response.text());
+                    .then(function(){
+                        alert(response.text());
                     })
                     .then(result => console.log(result))
                     .catch(error => console.log('error', error));
@@ -34,9 +34,6 @@
 			}
             
             const obj = await f_llamar_chatbot();
-
-            let divContenido = $('#contenido');
-            divContenido.html(obj);
 
         })
     </script>
