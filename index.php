@@ -34,7 +34,7 @@
                     })
                     .then(response => response.json())
                     .then(json => console.log(json))
-                    .catch(error => console.log('Authorization failed : ' + error.message));
+                    .catch(error => console.log('MALDICIOOOOOOOOOOON UN ERROR: ' + error.message));
 				})
 			}
             
