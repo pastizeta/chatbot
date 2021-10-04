@@ -32,8 +32,11 @@
                         headers: headers,
                         referrerPolicy: 'no-referrer'
                     })
-                    .then(function(response) {
-                        alert(response);
+                    .then(function (response) {
+                        console.log(response);
+                        return response.blob();
+                    }).then(function (blob) {
+                        console.log(blob);
                     })
                     .catch(error => console.log('MALDICIOOOOOOOOOOON UN ERROR: ' + error.message));
 				})
