@@ -30,7 +30,7 @@
                         console.log(result);
 
                         let div = $('#contenido');
-                        div.innerHTML(result);
+                        div.html(result);
                     })
                     .catch(error => console.log('error', error));
                 })
