@@ -14,21 +14,26 @@
     <script type="text/javascript">
         $(document).ready(async() =>{
             
+
+
             f_llamar_chatbot = () =>{
 				return new Promise((resolve,reject) =>{
-					$.ajax({
-						type:'GET',
-						url:'https://dova14793zz3k.cloudfront.net',
-                        headers: {'Origin','https://afternoon-bayou-48837.herokuapp.com/'},
-						success: function(response){
+					
+                    let headers = new Headers();
 
-							resolve(result);
-						},
-						error:function(jhx,errorStatus,t){
-							reject('Hay un error: ' + errorStatus + ", " + t);
-						}
+                    headers.append('Content-Type', 'application/json');
+                    headers.append('Accept', 'application/json');
+                    headers.append('Origin','https://afternoon-bayou-48837.herokuapp.com/');
 
-					});
+                    fetch('https://dova14793zz3k.cloudfront.net', {
+                        mode: 'cors',
+                        credentials: 'include',
+                        method: 'GET',
+                        headers: headers
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                    .catch(error => console.log('Authorization failed : ' + error.message));
 				})
 			}
             
