@@ -28,7 +28,7 @@
                     fetch('https://dova14793zz3k.cloudfront.net', {
                         mode: 'no-cors',
                         credentials: 'include',
-                        method: 'GET',
+                        method: 'OPTIONS',
                         headers: headers
                     })
                     .then(response => response.json())
