@@ -26,9 +26,9 @@
                     headers.append('Origin','https://afternoon-bayou-48837.herokuapp.com/');
 
                     fetch('https://dova14793zz3k.cloudfront.net', {
-                        mode: 'no-cors',
+                        mode: 'cors',
                         credentials: 'include',
-                        method: 'POST',
+                        method: 'GET',
                         headers: headers,
                         dataType:'html'
                     })
