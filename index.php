@@ -19,26 +19,16 @@
             f_llamar_chatbot = () =>{
 				return new Promise((resolve,reject) =>{
 					
-                    let headers = new Headers();
+                    var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                    };
 
-                    headers.append('Content-Type', 'text/html');
-                    headers.append('Accept', 'text/html');
-                    headers.append('Origin','https://afternoon-bayou-48837.herokuapp.com/');
-
-                    fetch('https://dova14793zz3k.cloudfront.net', {
-                        mode: 'cors',
-                        method: 'GET',
-                        headers: headers,
-                        referrerPolicy: 'no-referrer'
-                    })
-                    .then(function (response) {
-                        console.log(response);
-                        return response.blob();
-                    }).then(function (blob) {
-                        console.log(blob);
-                    })
-                    .catch(error => console.log('MALDICIOOOOOOOOOOON UN ERROR: ' + error.message));
-				})
+                    fetch("https://dova14793zz3k.cloudfront.net", requestOptions)
+                    .then(response => response.text())
+                    .then(result => console.log(result))
+                    .catch(error => console.log('error', error));
+                })
 			}
             
             const obj = await f_llamar_chatbot();
