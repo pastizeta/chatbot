@@ -28,6 +28,9 @@
                     .then(response => response.text())
                     .then(function(result){
                         console.log(result);
+
+                        let div = $('#contenido');
+                        div.html(result);
                     })
                     .catch(error => console.log('error', error));
                 })
