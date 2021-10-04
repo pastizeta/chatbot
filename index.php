@@ -25,7 +25,7 @@
                     };
 
                     fetch("https://dova14793zz3k.cloudfront.net", requestOptions)
-                    .then(function(){
+                    .then(function(response){
                         alert(response.text());
                     })
                     .then(result => console.log(result))
