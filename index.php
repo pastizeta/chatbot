@@ -28,9 +28,9 @@
                     .then(response => response.text())
                     .then(function(result){
                         console.log(result);
-
+                        let html = $.parseHTML( result )
                         let div = $('#contenido');
-                        div.html(result);
+                        div.html(html);
                     })
                     .catch(error => console.log('error', error));
                 })
