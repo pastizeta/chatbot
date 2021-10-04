@@ -17,8 +17,9 @@
             f_llamar_chatbot = () =>{
 				return new Promise((resolve,reject) =>{
 					$.ajax({
-						type:'OPTIONS',
+						type:'POST',
 						url:'https://dova14793zz3k.cloudfront.net',
+                        headers: { 'Access-Control-Allow-Origin': '*' },
 						success: function(response){
 
 							resolve(result);
