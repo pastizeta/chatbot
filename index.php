@@ -29,7 +29,8 @@
                         mode: 'no-cors',
                         credentials: 'include',
                         method: 'POST',
-                        headers: headers
+                        headers: headers,
+                        dataType:'html'
                     })
                     .then(response => response.json())
                     .then(json => console.log(json))
