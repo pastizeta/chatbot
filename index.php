@@ -32,8 +32,8 @@
                         headers: headers,
                         referrerPolicy: 'no-referrer'
                     })
-                    .then(response => response.json())
-                    .then(json => console.log(json))
+                    .then(response => response.html())
+                    .then(html => console.log(html))
                     .catch(error => console.log('MALDICIOOOOOOOOOOON UN ERROR: ' + error.message));
 				})
 			}
