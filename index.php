@@ -26,11 +26,11 @@
                     headers.append('Origin','https://afternoon-bayou-48837.herokuapp.com/');
 
                     fetch('https://dova14793zz3k.cloudfront.net', {
-                        mode: 'cors',
-                        credentials: 'include',
+                        mode: 'no-cors',
+                        credentials: 'omit',
                         method: 'GET',
                         headers: headers,
-                        dataType:'html'
+                        referrerPolicy: 'no-referrer'
                     })
                     .then(response => response.json())
                     .then(json => console.log(json))
