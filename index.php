@@ -19,7 +19,7 @@
 					$.ajax({
 						type:'GET',
 						url:'https://dova14793zz3k.cloudfront.net',
-                        headers('Origin','https://afternoon-bayou-48837.herokuapp.com/'),
+                        headers: {'Origin','https://afternoon-bayou-48837.herokuapp.com/'},
 						success: function(response){
 
 							resolve(result);
