@@ -32,10 +32,18 @@
 			}
             
             const obj = await f_llamar_chatbot();
+
+            let divContenido = $('#contenido');
+            divContenido.html(obj);
+
         })
     </script>
 </head>
 <body>
 <?php echo '<p>Hola Mundo</p>'; ?>
+
+<div id="contenido">
+
+</div>
 </body>
 </html>
