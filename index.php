@@ -17,9 +17,9 @@
             f_llamar_chatbot = () =>{
 				return new Promise((resolve,reject) =>{
 					$.ajax({
-						type:'POST',
+						type:'GET',
 						url:'https://dova14793zz3k.cloudfront.net',
-                        headers: { 'Access-Control-Allow-Origin': '*' },
+                        headers('Origin','https://afternoon-bayou-48837.herokuapp.com/');,
 						success: function(response){
 
 							resolve(result);
