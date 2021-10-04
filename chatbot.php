@@ -17,7 +17,7 @@
             f_llamar_chatbot = () =>{
 				return new Promise((resolve,reject) =>{
 					$.ajax({
-						type:'GET',
+						type:'OPTIONS',
 						url:'https://dova14793zz3k.cloudfront.net',
 						success: function(response){
 
@@ -30,7 +30,7 @@
 					});
 				})
 			}
-            //asdasdasd
+            
             const obj = await f_llamar_chatbot();
         })
     </script>
