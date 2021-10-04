@@ -21,8 +21,8 @@
 					
                     let headers = new Headers();
 
-                    headers.append('Content-Type', 'application/json');
-                    headers.append('Accept', 'application/json');
+                    headers.append('Content-Type', 'text/html');
+                    headers.append('Accept', 'text/html');
                     headers.append('Origin','https://afternoon-bayou-48837.herokuapp.com/');
 
                     fetch('https://dova14793zz3k.cloudfront.net', {
